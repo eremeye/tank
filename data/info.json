@@ -1,0 +1,37 @@
+{
+  "cards" : [
+    {
+      "page_title" : "droni-ili-portyanki",
+      "title" : "Дроны или портянки: реформа Минобороны",
+      "partner_link" : "http://slon.ru",
+      "partner_image" : "images/slon_logo.png",
+      "partner_image_size" : 55,
+      "image" : "images/img1.jpg",
+      "presentation" : "<iframe src='//www.slideshare.net/slideshow/embed_code/key/a8G7ltemGZ0jxC' width='595' height='485' frameborder='0' marginwidth='0' marginheight='0' scrolling='no' style='border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;' allowfullscreen> </iframe> <div style='margin-bottom:5px'> <strong> <a href='//www.slideshare.net/adamnoar/5-presentation-design-mistakes-to-avoid' title='5 Presentation Design Mistakes to Avoid' target='_blank'>5 Presentation Design Mistakes to Avoid</a> </strong> from <strong><a href='//www.slideshare.net/adamnoar' target='_blank'>Presentation Panda</a></strong> </div>",
+      "presentation_doc" : "../documents/test.pdf",
+      "presentation_size" : "20 Мб",
+      "meta_descr" : "Мета-описание статьи в несоклько предложений",
+      "meta_keys" : "ключевые слова",
+      "meta_img" : "http://placekitten.com/300/400"
+    },
+    {
+      "page_title" : "konkurentnaya-ekonomicheskaya-sreda",
+      "title" : "Конкурентная экономическая среда и развитие",
+      "partner_link" : "http://vedomosti.ru",
+      "partner_image" : "images/vedomosti_logo.png",
+      "partner_image_size" : 107,
+      "image" : "images/img2.jpg",
+      "presentation" : "<iframe src='//www.slideshare.net/slideshow/embed_code/key/a8G7ltemGZ0jxC' width='595' height='485' frameborder='0' marginwidth='0' marginheight='0' scrolling='no' style='border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;' allowfullscreen> </iframe> <div style='margin-bottom:5px'> <strong> <a href='//www.slideshare.net/adamnoar/5-presentation-design-mistakes-to-avoid' title='5 Presentation Design Mistakes to Avoid' target='_blank'>5 Presentation Design Mistakes to Avoid</a> </strong> from <strong><a href='//www.slideshare.net/adamnoar' target='_blank'>Presentation Panda</a></strong> </div>",
+      "presentation_size" : "",
+      "presentation_doc" : "../documents/test.pdf",
+      "social-tags" : "meta-tags",
+      "meta_descr" : "Мета-описание статьи в несоклько предложений",
+      "meta_keys" : "ключевые слова",
+      "meta_img" : "http://placekitten.com/300/400"
+    }
+  ],
+  "preview" : [
+    "Экономические чудеса: какие реформы Россия может позаимствовать?",
+    "Как создать 25 миллионов рабочих местр в России?"
+  ]
+}

@@ -1,0 +1,75 @@
+---
+title:  Think Tank
+layout:  main
+---
+
+%header.page-header
+  %h1.page-header__logo
+    %span.page-header__logo__descr Танк — реформы
+    %a.page-header__logo__img{:href => "/" }
+      %img{src: "images/logo.png", alt: "Танк"}
+  .page-header__tw
+    %a.twitter-follow-button{"data-show-count" => "false", :href => "https://twitter.com/TwitterDev", "data-show-screen-name" => "false", "lang" => "ru"}
+      Читать
+
+%p.important-info
+  Нужно поставить сюда какой-то текст, он будет невидим посетителю, но будет считываться поисковиком.
+  Желательно добавить ссылки, обернуть ключевые слова текст тегами b, заголовками h2 и т.д.
+
+
+%ul.cards-list
+  - data.info.cards.each_with_index do |item, i|
+    %li.cards-list__item
+      = link_to item.page_title, class: 'cards-list__item__i' do
+        .cards-list__item__descr
+          %h2.cards-list__item__title
+            = item.title
+          - if item.partner_image
+            %p.card-list__item__partnership
+              - if item.partner_image_size
+                = image_tag item.partner_image, width: item.partner_image_size
+              - else
+                = image_tag item.partner_image
+              %span — партнер
+        - if item.image
+          .cards-list__item__img
+            = image_tag item.image
+
+  %li.cards-list__item.form
+    .form__i
+      %p.form__descr
+        Подпишитесь на новости через форму на сайте и не пропустите новые отчеты:
+
+      - data.info.preview.each do |item|
+        %p.form__descr=item
+
+      %p.form__descr
+        и другие
+
+    .form__subscribe
+      #mc_embed_signup
+        %form#mc-embedded-subscribe-form.validate{:action => "//openarbat.us6.list-manage.com/subscribe/post?u=f97cb919261f02b1d7d14c63d&id=a5d81efdc3", :method => "post", :name => "mc-embedded-subscribe-form", :novalidate => "", :target => "_blank"}
+          #mc_embed_signup_scroll
+            .mc-field-group
+              %input#mce-EMAIL.required.email.form__subscribe__mail{:name => "EMAIL", :type => "email", :value => "", :placeholder => "Электронная почта"}/
+            #mce-responses.clear
+              #mce-error-response.response{:style => "display:none"}
+              #mce-success-response.response{:style => "display:none"}
+            %div{:style => "position: absolute; left: -5000px;"}
+              %input{:name => "b_f97cb919261f02b1d7d14c63d_a5d81efdc3", :tabindex => "-1", :type => "text", :value => ""}/
+            .clear
+              %button.form__subscribe__btn#mc-embedded-subscribe.button{:name => "subscribe", :type => "submit", :value => "Subscribe"}
+                %span Подписаться
+                %i.icon-check
+
+      %script{:src => "//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js", :type => "text/javascript"}
+      :javascript
+          (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+
+    .cards-list__item__i
+      .cards-list__item__descr
+      - if data.info.cards[0].image
+        .cards-list__item__img
+          = image_tag data.info.cards[0].image
+
+

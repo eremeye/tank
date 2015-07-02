@@ -1,0 +1,49 @@
+!!! 5
+%html
+  %head
+    -# Meta tags
+    = partial "layouts/meta"
+    %meta{:content => "website", :property => "og:type"}/
+    %meta{:content => "Заголовок сайта", :property => "og:title"}/
+    %meta{:content => "Описание сайта", :property => "description"}/
+    %meta{:content => "Описание сайта", :property => "og:description"}/
+    %meta{:content => "ключевые слова для главной", :property => "keywords"}/
+    %meta{:content => "Картинка", :property => "og:image"}/
+    %meta{:content => "Картинка", :property => "og:image:url"}/
+    %meta{:content => "Размер картинки", :property => "og:image:width"}/
+    %meta{:content => "Tank.pm", :property => "og:site_name"}/
+    %meta{:content => "http://tank.pm", :property => "og:url"}/
+    %meta{:content => "@TWITTER_CHANNEL", :property => "twitter:site"}/
+
+    -# Page title
+    %title= current_page.data.title
+    -# Fonts
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto:400,700", :rel => "stylesheet", :type => "text/css"}/
+    -# Stylesheets
+    = stylesheet_link_tag "application"
+    -# Application icons
+    = partial "layouts/icons"
+
+  %body{ class: current_page.data.classes || "" }
+    .g-page
+      .g-content
+        = yield
+    = partial "elements/footer"
+
+  :javascript
+    window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));

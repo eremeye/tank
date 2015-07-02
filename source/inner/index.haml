@@ -1,0 +1,74 @@
+!!! 5
+%html
+  %head
+    -# Meta tags
+    = partial "layouts/meta"
+    -# Meta for sharing
+    %meta{:content => "website", :property => "og:type"}/
+    %meta{:content => card.title, :property => "og:title"}/
+    %meta{:content => card.meta_descr, :property => "description"}/
+    %meta{:content => card.meta_descr, :property => "og:description"}/
+    %meta{:content => card.meta_keys, :property => "keywords"}/
+    %meta{:content => card.meta_img, :property => "og:image"}/
+    %meta{:content => card.meta_img, :property => "og:image:url"}/
+    %meta{:content => "130", :property => "og:image:width"}/
+    %meta{:content => "Tank.pm", :property => "og:site_name"}/
+    %meta{:content => "http://tank.pm/#{card.page_title}", :property => "og:url"}/
+    %meta{:content => "@TWITTER_CHANNEL", :property => "twitter:site"}/
+
+    -# Page title
+    %title= card.title
+
+    -# Fonts
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto:400,700", :rel => "stylesheet", :type => "text/css"}/
+
+    -# Stylesheets
+    = stylesheet_link_tag "application"
+    = stylesheet_link_tag "vendor/social-likes_classic.css"
+
+    -# Application icons
+    = partial "layouts/icons"
+
+  %body.inner
+    .g-page
+      .g-content
+        %header.inner-header
+          .inner-header__logo
+            %a{:href => "/" }
+              %img{src: "../images/logo2.png", alt: "Танк"}
+
+          .inner-header__partner
+            .inner-header__partner__i
+              %span партнер
+
+              - if card.partner_image_size
+                = link_to card.partner_link do
+                  = image_tag card.partner_image, width: card.partner_image_size
+              - else
+                = link_to card.partner_link do
+                  = image_tag card.partner_image
+
+          %h1.inner-header__title
+            = card.title
+
+        .presentation
+          .presentation__i
+            = card.presentation
+
+        .presentation-info
+          - if card.presentation_doc
+            .presentation-info__full
+              %span.label PDF
+              =link_to "Полная версия реформы", card.presentation_doc, target: '_blank'
+          .sharing-block
+            .social-likes
+              .facebook{:title => "Поделиться ссылкой на Фейсбуке"} Facebook
+              .twitter{:title => "Поделиться ссылкой в Твиттере"} Twitter
+              .vkontakte{:title => "Поделиться ссылкой во Вконтакте"} Вконтакте
+
+    = partial "elements/footer"
+
+    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+    = javascript_include_tag "social-likes.min"
+
+
