@@ -1,5 +1,5 @@
 @mixin layout
-  min-width: 970px
+  min-width: 320px
   max-width: 1400px
   margin: 0 auto
 
@@ -26,17 +26,19 @@ INPUT, TEXTAREA
   -webkit-appearance: none
 A
   text-decoration: none
-  +transition(color ease 0.3s)
+  +transition(color ease 0.5s)
 
 
 /* Footer
 FOOTER
   position: relative
-  height: 85px
-  +layout
+  min-height: 85px
   background: #f4f4f4
 
 .footer__i
+  +layout
+
+.footer__ii
   +clearfix
   padding: 24px 30px 20px
   +fz(14px,19px)
@@ -48,7 +50,7 @@ FOOTER
   A
     color: #372a94
     &:hover
-      color: lighten(#372a94, 10%)
+      color: #ef0c32
 
 .footer__copy
   float: right
@@ -111,11 +113,11 @@ FOOTER
   margin: 0 25px 25px 0
   background: #ffffff
   color: #000
-  +transition(all .3s ease)
+  +transition(all .5s ease)
 
   &:hover
     top: -5px
-    +box-shadow(0 3px 8px 1px rgba(46, 46, 46, 0.30))
+    +box-shadow(0 8px 20px 2px rgba(53, 63, 130, 0.2))
 
 .cards-list__item__descr
   position: relative
@@ -266,35 +268,89 @@ FOOTER
   text-align: center
 
 .presentation__i
-  display: block
+  display: inline-block
 
 .presentation-info
-  +pie-clearfix
+  position: relative
   padding: 0 30px 25px
+  text-align: center
 
 .presentation-info__full
+  position: absolute
+  left: 25px
+  top: 2px
+  +fz(14px,14px)
 
   A
-    +fz(14px,14px)
     color: #372a94
 
     &:hover
-      color: lighten(#372a94, 10%)
+      color: #ef0c32
 
   .label
     display: inline-block
     margin-right: 12px
     padding: 3px 5px
-    +fz(14px,14px)
     color: #fff
     background: #ef0c32
 
-.sharing-block, .presentation-info__full
-  float: left
-  width: 50%
+  .size
+    padding-left: 5px
+    color: #a3a3a3
+
 
 .sharing-block
-  text-align: right
-
-.social-likes
   display: inline-block
+
+
+@media screen and (min-width: 1230px)
+  .cards-list__item
+    width: 24.7%
+
+  .cards-list__item__title
+    +fz(26px,32px)
+
+@media screen and (max-width: 969px)
+  .presentation-info__full
+    position: static
+    margin-bottom: 20px
+
+  .inner-header
+    padding: 0 25px
+
+  .inner-header__logo, .inner-header__partner
+    position: static
+
+  .inner-header__logo
+    float: left
+    padding-right: 30px
+
+  .inner-header__partner
+    float: right
+
+  .inner-header__title
+    clear: both
+    padding: 10px 0 0
+    margin-bottom: 30px
+    +fz(26px,32px)
+    text-align: left
+
+
+
+@media screen and (max-width: 860px)
+  .cards-list__item
+    width: 49.6%
+
+@media screen and (max-width: 640px)
+  .footer__descr
+    width: 90%
+
+  .footer__copy
+    float: left
+
+  .cards-list__item
+    width: 100%
+
+  .cards-list__item__title
+    +fz(26px,32px)
+

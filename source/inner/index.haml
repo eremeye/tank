@@ -24,7 +24,7 @@
 
     -# Stylesheets
     = stylesheet_link_tag "application"
-    = stylesheet_link_tag "vendor/social-likes_classic.css"
+    = stylesheet_link_tag "vendor/social-likes_flat.css"
 
     -# Application icons
     = partial "layouts/icons"
@@ -60,6 +60,8 @@
             .presentation-info__full
               %span.label PDF
               =link_to "Полная версия реформы", card.presentation_doc, target: '_blank'
+              - if card.presentation_size
+                %span.size= card.presentation_size
           .sharing-block
             .social-likes
               .facebook{:title => "Поделиться ссылкой на Фейсбуке"} Facebook
