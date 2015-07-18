@@ -4,10 +4,9 @@
     -# Meta tags
     = partial "layouts/meta"
     %meta{:content => "website", :property => "og:type"}/
-    %meta{:content => "Заголовок сайта", :property => "og:title"}/
-    %meta{:content => "Описание сайта", :property => "description"}/
-    %meta{:content => "Описание сайта", :property => "og:description"}/
-    %meta{:content => "ключевые слова для главной", :property => "keywords"}/
+    %meta{:content => "Танк", :property => "og:title"}/
+    %meta{:content => "Think Tank. Разрабатываем программу реформ в России", :property => "description"}/
+    %meta{:content => "Think Tank. Разрабатываем программу реформ в России", :property => "og:description"}/
     %meta{:content => "images/share.png", :property => "og:image"}/
     %meta{:content => "images/share.png", :property => "og:image:url"}/
     %meta{:content => "1200", :property => "og:image:width"}/
@@ -23,6 +22,7 @@
     = stylesheet_link_tag "application"
     -# Application icons
     = partial "layouts/icons"
+
 
   %body{ class: current_page.data.classes || "" }
     .g-page

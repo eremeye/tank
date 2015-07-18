@@ -126,7 +126,7 @@ FOOTER
 
 .cards-list__item__title
   font-weight: 700
-  +fz(23px,27px)
+  +fz(20px,25px)
 
 .card-list__item__partnership
   position: absolute
@@ -264,11 +264,26 @@ FOOTER
   text-align: center
 
 .presentation
-  margin-bottom: 70px
+  margin-bottom: 30px
   text-align: center
+  max-width: 900px
+  margin: 0 auto 30px
 
 .presentation__i
-  display: inline-block
+  position: relative
+  padding-bottom: 59.25%
+  padding-top: 23px
+  height: 0
+  overflow: hidden
+  max-width: 1200px
+  
+.presentation__i
+  iframe, object, embed 
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
 
 .presentation-info
   position: relative
@@ -308,7 +323,7 @@ FOOTER
     width: 24.7%
 
   .cards-list__item__title
-    +fz(26px,32px)
+    +fz(23px,30px)
 
 @media screen and (max-width: 969px)
   .presentation-info__full
@@ -332,7 +347,7 @@ FOOTER
     clear: both
     padding: 10px 0 0
     margin-bottom: 30px
-    +fz(26px,32px)
+    +fz(18px,24px)
     text-align: left
 
 
